@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>dicee</title>
+    <link rel="stylesheet" href="styles17.css">
+    <link href= "https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body onload="myFunction()">
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="">
+      </div>
+<h1 class="head"></h1>
+    </div>
+
+<script type="text/javascript">
+function myFunction(){
+  var random1=Math.random()*6;
+  random1=Math.floor(random1);
+  var random2=Math.random()*6;
+  random2=Math.floor(random2);
+  var i=["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png"];
+  document.querySelector(".img1").setAttribute("src",i[random1]);
+  document.querySelector(".img2").setAttribute("src",i[random2]);
+  if(random1<random2)
+  document.querySelector(".head").innerHTML="player2 winner";
+  else if(random1>random2)
+  document.querySelector(".head").innerHTML="player1 winner";
+  else
+  document.querySelector(".head").innerHTML="Tie";
+
+  }
+  </script>
+
+  </body>
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+</html>
